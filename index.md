@@ -110,21 +110,21 @@ In the above code snippets, we have changed the `dbname` name from ``yiiadvanced
 
 ### Step 3 -- Creating a simple database recond Using terminal
 
-Let us now create a table in our database using terminal. Refer on  `Step - 2` [here](https://www.section.io/engineering-education/maria-data-base/) and create a database `CRUD`  and table `student`
+Let us now create a table in our database using the terminal. Refer on  `Step - 2` [here](https://www.section.io/engineering-education/maria-data-base/) and create a database `CRUD`  and table `student`
 
 ### Step 4 -- CRUD Operation Using GII
 Open your browser and type http://localhost/CRUD/frontend/web/index.php?r=gii . If there is no error you should see a welcome page similar to the one below:
 
 ![Gii_welcome_page](Gii_welcome_page.png)
 
-Kudos! Your now ready to use GIImodule.
+Kudos! You're now ready to use GIImodule.
 
-Now its time to use GII and generate code for the `student` table that you created in the database. To do that, follow these simple steps:
+Now let us use GII and generate code for the `student` table that you created in the database. To do that, follow these simple steps:
 
 1. Click `start` on the `Model Generator`. This will open a page similar to the one below:
 
 ![model_generator](model_generator.png)
-We need to fill the blank spaces. Lets do it:
+We need to fill the blank spaces. Let's do it:
 
 Table name - `students`
 
@@ -132,17 +132,17 @@ Model Class Name - `Students`
 
 Name space - here we are changing the path from `apps\models` to `frontend\models`
 
-`Click Preview`. Your will get the page similar to the one below:
+`Click Preview`. You will get a page similar to the one below:
 
 ![generate](generate.png)
-Now click on `Generate` and you will see a conglatulation note at the bottom of your page.
+Now click on `Generate` and you will see  congratulations note at the bottom of your page.
 
 2. Click on `CRUD GENERATOR` and fill the blank spaces as shown in the image below:
 
 ![crud_generator.png](crud_generator.png)
 
 
-Now click `Generate`. If its successful, at the bottom you will have `The code has been generated successfully.`
+Now click `Generate`. If it's successful, at the bottom you will have `The code has been generated successfully.`
 
 ### Storing Data in the database using GII
 
@@ -154,21 +154,21 @@ Fill in the blank spaces as shown below and click save.
 From the acronym CRUD, we have seen the function of the letter `C` which is CREAT. On clicking Save, we will now be working on the function of the letter `R` which is READ. Here, you will see the record that you have created. It should look like the image below.
 ![read](read.png)
 
-Create another record since we will have to delete one as we move on to letter `D`.
+Create another record since we will have to delete one as we move on to the letter `D`.
 
 In your database you should have this:
 
 ![database_record](database_record.png)
 
-Let us move on to letter `U` which represent Update. As we had said earlier, we update a record depending on the primary key. Let us update our first record with primary key 1. Click  button `UPDATE` and update as below:
+Let us move on to the letter `U` which represents Update. As we had said earlier, we update a record depending on the primary key. Let us update our first record with primary key 1. Click  button `UPDATE` and update as below:
 
 ![update](update.png)
 
-Save your update and navigate to database to see the changes.
+Save your update and navigate to the database to see the changes.
 
-Let us delete record two under Primary Key 2. Since your working on record 1 naviage to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
+Let us delete record two under Primary Key 2. Since your working on record 1 navigate to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
 
-Click `Delete`. You will get a prompt asking you wheather you want to delete. Click OK.
+Click `Delete`. You will get a prompt asking you whether you want to delete it. Click OK.
 
 You will have only one record now.
 ![delete](delete.png)
