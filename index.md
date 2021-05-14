@@ -15,6 +15,7 @@ Let us look at the function of each letter in details:
 4. Delete - Deletes a row in the WHERE condition.
 
 ### What Is GII?
+
 [GII]() is a YII module that generates code for CRUD, forms, models, and controllers. In YII 2 Framework GII is accessible by the localhost by default and the module is accessed in the browser.
 
 Prerequisites
@@ -153,6 +154,24 @@ Fill in the blank spaces as shown below and click save.
 From the acronym CRUD, we have seen the function of the letter `C` which is CREAT. On clicking Save, we will now be working on the function of the letter `R` which is READ. Here, you will see the record that you have created. It should look like the image below.
 ![read](read.png)
 
+Create another record since we will have to delete one as we move on to letter `D`.
+
+In your database you should have this:
+
+![database_record](database_record.png)
+
+Let us move on to letter `U` which represent Update. As we had said earlier, we update a record depending on the primary key. Let us update our first record with primary key 1. Click  button `UPDATE` and update as below:
+
+![update](update.png)
+
+Save your update and navigate to database to see the changes.
+
+Let us delete record two under Primary Key 2. Since your working on record 1 naviage to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
+
+Click `Delete`. You will get a prompt asking you wheather you want to delete. Click OK.
+
+You will have only one record now.
+![delete](delete.png)
 
 
 ### Conclusion
