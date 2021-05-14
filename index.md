@@ -30,7 +30,7 @@ In this article we are going to:
 
 1. Create a YII project named CRUD. 
 2. Create a simple database record using terminal 
-3. Generate CRUD using GII
+3. Operate CRUD using GII
 4. Store data in database using GII
 
 Let's get started.
@@ -79,7 +79,7 @@ To verify this, open your browser and type http://localhost/CRUD/frontend/web. T
 
 ![CRUD project velification](CRUD_project_velification.png)
 
-### Connecting CRUD project with the database
+### Step 2 -- Connecting CRUD project with the database
 
 Open the `CRUD` project with your favorite type editor and navigate to, `common > config > mainlocal.php`. Change the code to look similar to this:
 ```php
@@ -107,8 +107,54 @@ return [
 ```
 In the above code snippets, we have changed the `dbname` name from ``yiiadvanced`` to CRUD. By doing this we have connected our Project with the database.
 
-Let us now create a table in our database using terminal. Refer on  `Step - 2` [here](https://www.section.io/engineering-education/maria-data-base/) and create a database `CRUD`  and table `contacts`
+### Step 3 -- Creating a simple database recond Using terminal
+
+Let us now create a table in our database using terminal. Refer on  `Step - 2` [here](https://www.section.io/engineering-education/maria-data-base/) and create a database `CRUD`  and table `student`
+
+### Step 4 -- CRUD Operation Using GII
+Open your browser and type http://localhost/CRUD/frontend/web/index.php?r=gii . If there is no error you should see a welcome page similar to the one below:
+
+![Gii_welcome_page](Gii_welcome_page.png)
+
+Kudos! Your now ready to use GIImodule.
+
+Now its time to use GII and generate code for the `student` table that you created in the database. To do that, follow these simple steps:
+
+1. Click `start` on the `Model Generator`. This will open a page similar to the one below:
+
+![model_generator](model_generator.png)
+We need to fill the blank spaces. Lets do it:
+
+Table name - `students`
+
+Model Class Name - `Students`
+
+Name space - here we are changing the path from `apps\models` to `frontend\models`
+
+`Click Preview`. Your will get the page similar to the one below:
+
+![generate](generate.png)
+Now click on `Generate` and you will see a conglatulation note at the bottom of your page.
+
+2. Click on `CRUD GENERATOR` and fill the blank spaces as shown in the image below:
+
+![crud_generator.png](crud_generator.png)
+
+
+Now click `Generate`. If its successful, at the bottom you will have `The code has been generated successfully.`
+
+### Storing Data in the database using GII
+
+Our GII is now ready to store data in the database. Let's create a simple record and store it in the database. Copy and paste http://localhost/CRUD/frontend/web/index.php?r=student%2Fcreate on your browser.
+
+Fill in the blank spaces as shown below and click save.
+![create](create.png)
+
+From the acronym CRUD, we have seen the function of the letter `C` which is CREAT. On clicking Save, we will now be working on the function of the letter `R` which is READ. Here, you will see the record that you have created. It should look like the image below.
+![read](read.png)
 
 
 
 ### Conclusion
+
+ nb Phpmyadmin image should be repeated
