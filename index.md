@@ -1,14 +1,16 @@
 ### Introduction
+
 Programmers who have ever worked with the database are likely to have also worked with CRUD Operations. These operations are very important when a developer wants to learn any web framework. In this article, we will learn how to operates CRUD using [YII 2 framework]().
 
 ### What is CRUD?
+
 CRUD is an acronym that stands for Create, Read, Update, Delete. Each letter in the acronym can refer to all functions executed in relational database applications.
 
 Let us look at the function of each letter in details:
 
 1. CREATE - Performs the INSERT operation to a new record.
 
-2. READ - Reads and display the record based on the Primary key.
+2. READ - Reads one single recond and display the record based on the Primary key.
 
 3. UPDATE - Execute an UPDATE statement in the table depending on the Primary key for a record within the WHERE condition.
 
@@ -25,7 +27,7 @@ I will assume that you have:
 1. Xampp installed in your machine. If not follow [these](https://www.section.io/engineering-education/maria-data-base/) steps to install. This will come along with PhpMyAdmin which we will use to manage our database record.
 After installing Xampp, a folder `/opt/lampp` will be created in Linux OS.
 
-2. YII 2 installed. If not refer [here](https://www.section.io/engineering-education/php-yii2-framework/) on how to install. Install the advanced application template.
+2. YII 2 installed. If not, refer [here](https://www.section.io/engineering-education/php-yii2-framework/) on how to install. Install the advanced application template.
 
 In this article we are going to:
 
@@ -76,7 +78,7 @@ $ sudo /opt/lampp/lampp start
 ```
 You can also refer to `Step 1` [here](https://www.section.io/engineering-education/maria-data-base/) on how to start the server.
 
-To verify this, open your browser and type http://localhost/CRUD/frontend/web. This is what you should see:
+To verify this, open your browser and type `http://localhost/CRUD/frontend/web`. This is what you should see:
 
 ![CRUD project velification](CRUD_project_velification.png)
 
@@ -113,7 +115,7 @@ In the above code snippets, we have changed the `dbname` name from ``yiiadvanced
 Let us now create a table in our database using the terminal. Refer on  `Step - 2` [here](https://www.section.io/engineering-education/maria-data-base/) and create a database `CRUD`  and table `student`
 
 ### Step 4 -- CRUD Operation Using GII
-Open your browser and type http://localhost/CRUD/frontend/web/index.php?r=gii . If there is no error you should see a welcome page similar to the one below:
+Open your browser and type `http://localhost/CRUD/frontend/web/index.php?r=gii `. If there is no error you should see a welcome page similar to the one below:
 
 ![Gii_welcome_page](Gii_welcome_page.png)
 
@@ -142,17 +144,20 @@ Now click on `Generate` and you will see  congratulations note at the bottom of 
 ![crud_generator.png](crud_generator.png)
 
 
-Now click `Generate`. If it's successful, at the bottom you will have `The code has been generated successfully.`
+Now click `Generate`. If it's successful, at the bottom you will have `The code has been generated successfully.` You will also see the list of files created
 
 ### Storing Data in the database using GII
+We will start our CRUD operations at this point.
 
-Our GII is now ready to store data in the database. Let's create a simple record and store it in the database. Copy and paste http://localhost/CRUD/frontend/web/index.php?r=student%2Fcreate on your browser.
+Our GII is now ready to store data in the database. Let's create a simple record and store it in the database. Copy and paste `http://localhost/CRUD/frontend/web/index.php?r=student%2Fcreate` on your browser.
 
 Fill in the blank spaces as shown below and click save.
 ![create](create.png)
 
-From the acronym CRUD, we have seen the function of the letter `C` which is CREAT. On clicking Save, we will now be working on the function of the letter `R` which is READ. Here, you will see the record that you have created. It should look like the image below.
+From the acronym CRUD, we have seen the function of the letter `C` which is CREATE. On clicking Save, we will be working on the function of the letter `R` which is READ. Here, you will open a page with all  record that you have created. You should have only one record since we only have a single record. It should look like the image below.
 ![read](read.png)
+
+Hmmm..We have created a record .{emoji}
 
 Create another record since we will have to delete one as we move on to the letter `D`.
 
@@ -164,6 +169,8 @@ Let us move on to the letter `U` which represents Update. As we had said earlier
 
 ![update](update.png)
 
+Walla.. We Updated our record.{emoji}
+
 Save your update and navigate to the database to see the changes.
 
 Let us delete record two under Primary Key 2. Since your working on record 1 navigate to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
@@ -173,7 +180,12 @@ Click `Delete`. You will get a prompt asking you whether you want to delete it. 
 You will have only one record now.
 ![delete](delete.png)
 
+Wow!… CRUD operations completed.
+
+To see the code generated by GII for functionality of CRUD, open  `htdocs>CRUD>frontend>views>student, htdocs>CRUD>frontend>models>Student.php` and `htdocs>CRUD>frontend>controllers>StudentController.php`
+
+### Understanding the URL
 
 ### Conclusion
 
- nb Phpmyadmin image should be repeated
+ <!-- nb Phpmyadmin image should be repeated -->
