@@ -4,17 +4,17 @@ Programmers who have ever worked with the database are likely to have also worke
 
 ### What is CRUD?
 
-CRUD is an acronym that stands for Create, Read, Update, Delete. Each letter in the acronym can refer to all functions executed in relational database applications.
+<!-- CRUD is an acronym that stands for Create, Read, Update, Delete. Each letter in the acronym can refer to all functions executed in relational database applications.
 
 Let us look at the function of each letter in details:
 
 1. CREATE - Performs the INSERT operation to a new record.
 
-2. READ - Reads one single recond and display the record based on the Primary key.
+2. READ - Reads one single record and displays the record based on the Primary key.
 
 3. UPDATE - Execute an UPDATE statement in the table depending on the Primary key for a record within the WHERE condition.
 
-4. Delete - Deletes a row in the WHERE condition.
+4. Delete - Deletes a row in the WHERE condition. -->
 
 ### What Is GII?
 
@@ -32,9 +32,9 @@ After installing Xampp, a folder `/opt/lampp` will be created in Linux OS.
 In this article we are going to:
 
 1. Create a YII project named CRUD.
-2. Create a simple database record using terminal.  
+2. Create a simple database record using the terminal.  
 3. Operate CRUD using GII.
-4. Store data in database using GII.
+4. Store data in the database using GII.
 
 Let's get started.
 
@@ -79,7 +79,7 @@ $ sudo /opt/lampp/lampp start
 ```
 You can also refer to `Step 1` [here](https://www.section.io/engineering-education/maria-data-base/) on how to start the server.
 
-To verify that you have creted a project, open your browser and type `http://localhost/CRUD/frontend/web`. This is what you should see:
+To verify that you have created a project, open your browser and type `http://localhost/CRUD/frontend/web`. This is what you should see:
 
 ![CRUD project velification](CRUD_project_velification.png)
 
@@ -139,7 +139,7 @@ Name space - here we are changing the path from `apps\models` to `frontend\model
 `Click Preview`. You will get a page similar to the one below:
 
 ![generate](generate.png)
-Now click on `Generate` and you will see  congratulations note at the bottom of your page.
+Now click on `Generate` and you will see congratulations note at the bottom of your page.
 
 2. Click on `CRUD GENERATOR` and fill the blank spaces as shown in the image below:
 
@@ -157,11 +157,11 @@ Our GII is now ready to store data in the database. Let's create a simple record
 Fill in the blank spaces as shown below and click save.
 ![create](create.png)
 
-From the acronym CRUD, we have seen the function of the letter `C` which is CREATE. On clicking Save, we will be working on the function of the letter `R` which is READ. Here, you will open a page with all  record that you have created. You should have only one record since we only have a single record. It should look like the image below.
+From the acronym CRUD, we have seen the function of the letter `C` which is CREATE. On clicking Save, we will be working on the function of the letter `R` which is READ. Here, you will open a page with all records that you have created. You should have only one record since we only have a single record. It should look like the image below.
 
 ![read](read.png)
 
-Hmmm...We have created a record .🥳
+Hmmm...We have created a record.🥳
 
 Create another record since we will have to delete one as we move on to the letter `D`.
 
@@ -203,15 +203,13 @@ Let us look at the URL below.
 
 1) r - this is the route for our application.
 
-2) student - this is the contoller.
+2) student - this is the controller.
 
 3) create -  this is the action.
 
 I hope it is clear now?
 
 ### Conclusion
-
-We have just scratched on the surface of the GiiModule. It has lot more feature to discuss, which can help us by generating default code and make our application development process faster.
 
 Happy coding. 🙂
 
