@@ -1,11 +1,14 @@
 
 ### Introduction
 
-Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. In this article, we will learn how to operates CRUD using [YII 2 framework](https://www.yiiframework.com/).
+Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. In this article, we will learn how to operates CRUD using YII 2 framework.
 
 ### What is CRUD?
 
-<!-- CRUD is an acronym that stands for Create, Read, Update, Delete. Each letter in the acronym can refer to all functions executed in relational database applications.
+<!-- CRUD is an {acronym that stands} abbreviation for  Create, Read, Update, Delete. Each letter in the 
+abbreviation can refer to all functions executed in relational database applications.
+
+
 
 Let us look at the function of each letter in details:
 
@@ -16,6 +19,18 @@ Let us look at the function of each letter in details:
 3. UPDATE - Execute an UPDATE statement in the table depending on the Primary key for a record within the WHERE condition.
 
 4. Delete - Deletes a row in the WHERE condition. -->
+
+<!-- The acronym CRUD stands for Create, Read, Update, and Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application.
+
+Let's take a closer look at each letter's function:
+
+1. CREATE - Creates a new record by executing an INSERT process.
+
+2. READ - Reads one single record and shows it using the Primary key.
+
+3. UPDATE - Perform a UPDATE command.
+
+4. Delete - In the WHERE condition, it deletes a row. -->
 
 ### What Is GII?
 
@@ -259,7 +274,7 @@ Let us look at the URL below.
 
 3) create -  this is the action.
 
-I hope it is clear now?
+I hope it is clear now.
 
 ### Conclusion
 
