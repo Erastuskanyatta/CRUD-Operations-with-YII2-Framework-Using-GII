@@ -1,26 +1,11 @@
 
 ### Introduction
 
-Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. In this article, we will learn how to operates CRUD using YII 2 framework.
+Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. In this article, we will learn how to operates CRUD using [YII 2 framework](https://www.yiiframework.com/).
 
 ### What is CRUD?
 
-<!-- CRUD is an {acronym that stands} abbreviation for  Create, Read, Update, Delete. Each letter in the 
-abbreviation can refer to all functions executed in relational database applications.
-
-
-
-Let us look at the function of each letter in details:
-
-1. CREATE - Performs the INSERT operation to a new record.
-
-2. READ - Reads one single record and displays the record based on the Primary key.
-
-3. UPDATE - Execute an UPDATE statement in the table depending on the Primary key for a record within the WHERE condition.
-
-4. Delete - Deletes a row in the WHERE condition. -->
-
-<!-- The acronym CRUD stands for Create, Read, Update, and Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application.
+The acronym CRUD stands for Create, Read, Update, and Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application.
 
 Let's take a closer look at each letter's function:
 
@@ -28,9 +13,9 @@ Let's take a closer look at each letter's function:
 
 2. READ - Reads one single record and shows it using the Primary key.
 
-3. UPDATE - Perform a UPDATE command.
+3. UPDATE - Perform an UPDATE command.
 
-4. Delete - In the WHERE condition, it deletes a row. -->
+4. Delete - In the WHERE condition, it deletes a row. 
 
 ### What Is GII?
 
@@ -224,7 +209,6 @@ From the acronym CRUD, we have seen the function of the letter `C` which is CREA
 
 ![read](read.png)
 
-Hmmm...We have created a record.🥳
 
 Create another record since we will have to delete one as we move on to the letter `D`.
 
@@ -236,15 +220,15 @@ Let us move on to the letter `U` which represents Update. As we had said earlier
 
 ![update](update.png)
 
-Walla...We Updated our record.👍
-
 Save your update and navigate to the database to see the changes.
 
 Let us delete record two under Primary Key 2. Since your working on record 1 navigate to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
 
-Click `Delete`. You will get a prompt asking you whether you want to delete it. Click OK.
 
-You will have only one record now.
+Click `Delete` button. You will get a confirmation pop up . Click OK.
+
+
+You will have only one record as shown in the figure below.. Record is deleted in the database as well.
 
 ![delete](delete.png)
 
@@ -274,10 +258,10 @@ Let us look at the URL below.
 
 3) create -  this is the action.
 
-I hope it is clear now.
+I hope it's clear now.
 
 ### Conclusion
 
-Happy coding. 🙂
+Happy coding! 🙂
 
 <!-- nb Phpmyadmin image should be repeated -->
