@@ -1,13 +1,12 @@
-
 ### Introduction
 
 Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. In this article, we will learn how to operates CRUD using [YII 2 framework](https://www.yiiframework.com/).
 
 ### What is CRUD?
 
-The acronym CRUD stands for Create, Read, Update, and Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application.
+The acronym CRUD stands for Create, Read, Update, Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application.
 
-Let's take a closer look at each letter's function:
+The function of each letter is as shown below:
 
 1. CREATE - Creates a new record by executing an INSERT process.
 
@@ -19,7 +18,8 @@ Let's take a closer look at each letter's function:
 
 ### What Is GII?
 
-[GII](https://www.yiiframework.com/extension/yiisoft/yii2-gii/doc/guide/2.2/en) is a YII module that generates code for CRUD, forms, models, and controllers. In YII 2 Framework GII is accessible by the localhost by default and the module is accessed in the browser.
+[GII](https://www.yiiframework.com/extension/yiisoft/yii2-gii/doc/guide/2.2/en) is a YII module that generates code for CRUD.
+ In YII 2 Framework GII is accessible by the localhost by default and the module is accessed in the browser.
 
 Prerequisites
 
@@ -31,7 +31,7 @@ After installing Xampp, a folder `/opt/lampp` will be created in Linux OS.
 
 2. YII 2 installed. If not, refer [here](https://www.section.io/engineering-education/php-yii2-framework/) on how to install. Install the advanced application template.
 
-In this article we are going to:
+We will do the following in this article:
 
 1. Create a YII project named CRUD.
 
@@ -55,7 +55,7 @@ $ sudo mv yii-advanced-app-2.0.42.tgz /opt/lampp/htdocs
 
 ```
 
-3. Now, open `/optlampp/htdocs` using teminal and type this command:
+3. Now, open `/optlampp/htdocs` using terminal and type this command:
 
 ```
 
@@ -91,7 +91,7 @@ $ sudo mv advanced CRUD
 
 ```
 
-You have created a YII project named CRUD . Congrats!
+You have created a YII project named CRUD. Congrats!
 
 NB. Please make sure you start your servers before running your project. Start Servers by entering the following command:
 
@@ -117,39 +117,39 @@ Open the `CRUD` project with your favorite type editor and navigate to, `common 
 
 return [
 
-   'components' => [
+  'components' => [
 
-       'db' => [
+      'db' => [
 
-           'class' => 'yii\db\Connection',
+          'class' => 'yii\db\Connection',
 
-           'dsn' => 'mysql:host=localhost;dbname=CRUD',
+          'dsn' => 'mysql:host=localhost;dbname=CRUD',
 
-           'username' => 'root',
+          'username' => 'root',
 
-           'password' => '',
+          'password' => '',
 
-           'charset' => 'utf8',
+          'charset' => 'utf8',
 
-       ],
+      ],
 
-       'mailer' => [
+      'mailer' => [
 
-           'class' => 'yii\swiftmailer\Mailer',
+          'class' => 'yii\swiftmailer\Mailer',
 
-           'viewPath' => '@common/mail',
+          'viewPath' => '@common/mail',
 
-           // send all mails to a file by default. You have to set
+          // send all mails to a file by default. You have to set
 
-           // 'useFileTransport' to false and configure a transport
+          // 'useFileTransport' to false and configure a transport
 
-           // for the mailer to send real emails.
+          // for the mailer to send real emails.
 
-           'useFileTransport' => true,
+          'useFileTransport' => true,
 
-       ],
+      ],
 
-   ],
+  ],
 
 ];
 
@@ -169,7 +169,7 @@ Open your browser and type `http://localhost/CRUD/frontend/web/index.php?r=gii `
 
 Kudos! You're now ready to use GIImodule.
 
-Now let us use GII and generate code for the `student` table that you created in the database. To do that, follow these simple steps:
+Now, let us use GII and generate code for the `student` table that you created in the database.
 
 1. Click `start` on the `Model Generator`. This will open a page like the one below:
 
@@ -209,7 +209,6 @@ From the acronym CRUD, we have seen the function of the letter `C` which is CREA
 
 ![read](read.png)
 
-
 Create another record since we will have to delete one as we move on to the letter `D`.
 
 In your database you should have this:
@@ -224,17 +223,15 @@ Save your update and navigate to the database to see the changes.
 
 Let us delete record two under Primary Key 2. Since your working on record 1 navigate to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
 
+Click the `Delete` button. You will get a confirmation pop-up. Click OK.
 
-Click `Delete` button. You will get a confirmation pop up . Click OK.
-
-
-You will have only one record as shown in the figure below.. Record is deleted in the database as well.
+You will have only one record as shown in the figure below. The record is deleted in the database as well.
 
 ![delete](delete.png)
 
 Wow!… CRUD operations completed.👏
 
-To see the files generated by GII for functionality of CRUD, open :
+To see the files generated by GII for the functionality of CRUD, open :
 
 - views-`htdocs>CRUD>frontend>views>student`
 
@@ -262,6 +259,8 @@ I hope it's clear now.
 
 ### Conclusion
 
-Happy coding! 🙂
+CRUD is a very important code generator for a web application developer. It saves developers time and also reduces the amount of code a developer has to code without it. 
 
-<!-- nb Phpmyadmin image should be repeated -->
+You can use it in your next web app project.
+
+Happy coding! 🙂
