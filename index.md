@@ -29,7 +29,7 @@ I will assume that you have:
 
 After installing Xampp, a folder `/opt/lampp` will be created in Linux OS.
 
-2. YII 2 installed. If not, refer [here](https://www.section.io/engineering-education/php-yii2-framework/) on how to install. Install the advanced application template.
+2. YII 2 installed. If not, refer [here](https://www.section.io/engineering-education/php-yii2-framework/) on how to install. Choose advanced application template.
 
 We will do the following in this article:
 
@@ -167,7 +167,7 @@ Open your browser and type `http://localhost/CRUD/frontend/web/index.php?r=gii `
 
 ![Gii_welcome_page](Gii_welcome_page.png)
 
-Kudos! You're now ready to use GIImodule.
+Kudos! You're now ready to use the GII module.
 
 Now, let us use GII and generate code for the `student` table that you created in the database.
 
@@ -223,7 +223,7 @@ Save your update and navigate to the database to see the changes.
 
 Let us delete record two under Primary Key 2. Since your working on record 1 navigate to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
 
-Click the `Delete` button. You will get a confirmation pop-up. Click OK.
+Click the `Delete` button. Click OK on the confirmation pop-up that will appear on your screen.
 
 You will have only one record as shown in the figure below. The record is deleted in the database as well.
 
@@ -261,6 +261,6 @@ I hope it's clear now.
 
 CRUD is a very important code generator for a web application developer. It saves developers time and also reduces the amount of code a developer has to code without it. 
 
-You can use it in your next web app project.
+Try it in your next web application project.
 
 Happy coding! 🙂
