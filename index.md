@@ -1,94 +1,91 @@
 ### Introduction
 
-Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. In this article, we will learn how to operates CRUD using [YII 2 framework](https://www.yiiframework.com/).
+Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. 
+
+In this article, we will learn how to carry out CRUD operations using [YII 2 framework](https://www.yiiframework.com/).
 
 ### What is CRUD?
 
-The acronym CRUD stands for Create, Read, Update, Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application.
+The acronym CRUD stands for Create, Read, Update, Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application. <!--not true-->
 
-The function of each letter is as shown below:
+The function of each of the above is as shown below:
 
 1. CREATE - Creates a new record by executing an INSERT process.
 
-2. READ - Reads one single record and shows it using the Primary key.
+2. READ - Reads one single record and shows it using the Primary key. <!--revise-->
 
-3. UPDATE - Perform an UPDATE command.
+3. UPDATE - Updates a record.
 
-4. Delete - In the WHERE condition, it deletes a row. 
+4. Delete - Deletes a record.
+
+<!-- In this section, try being generic. eg. "Updates a record". Save the details for now -->
 
 ### What Is GII?
 
-[GII](https://www.yiiframework.com/extension/yiisoft/yii2-gii/doc/guide/2.2/en) is a YII module that generates code for CRUD.
- In YII 2 Framework GII is accessible by the localhost by default and the module is accessed in the browser.
+[GII](https://www.yiiframework.com/extension/yiisoft/yii2-gii/doc/guide/2.2/en) is a YII module that generates code for CRUD operations.
+In YII 2 Framework GII is accessible by the localhost by default and the module is accessed in the browser.
 
-Prerequisites
+### Prerequisites
 
-I will assume that you have:
+This tutorial assumes that you have:
 
 1. Xampp installed in your machine. If not follow [these](https://www.section.io/engineering-education/maria-data-base/) steps to install. This will come along with PhpMyAdmin which we will use to manage our database record.
 
-After installing Xampp, a folder `/opt/lampp` will be created in Linux OS.
+After installing Xampp, a folder `/opt/lampp` will be created in Linux OS. We will use this folder later to create our YII project.
 
-2. YII 2 installed. If not, refer [here](https://www.section.io/engineering-education/php-yii2-framework/) on how to install. Choose advanced application template.
+2. YII 2 installed. If not, refer [to this tutorial](https://www.section.io/engineering-education/php-yii2-framework/) on how to download.  Download it and intall in your machine.
 
 We will do the following in this article:
 
 1. Create a YII project named CRUD.
-
 2. Create a simple database record using the terminal.  
-
 3. Operate CRUD using GII.
-
 4. Store data in the database using GII.
 
 Let's get started.
 
 ### Step 1 -- Create a YII CRUD project
 
-1. Navigate to the folder where the YII archive file was downloaded. In my case, it was downloaded in Downloads.  
+1. Navigate to the folder where the YII archive file was downloaded. In my case, it was downloaded in Downloads.
 
-2. Move this archive to `/opt/lampp/htdocs` . To move it, open the Downloads folder with terminal and type:
+
+2. Move this archive to `/opt/lampp/htdocs` . To move it, open the Downloads folder with a terminal and type:
 
 ```bash
-
 $ sudo mv yii-advanced-app-2.0.42.tgz /opt/lampp/htdocs
-
 ```
 
-3. Now, open `/optlampp/htdocs` using terminal and type this command:
+3. Open,  `/optlampp/htdocs` using a terminal. Type this command to open:
 
+```bash
+$ sudo /opt/lampp/htdocs
 ```
 
+In `/optlampp/htdocs` type the command below:
+```
 $ sudo tar -xvzf yii-advanced-app-2.0.42.tgz
-
 ```
 
 This command will unzip the Yii file and generate a new  folder `advanced`
 
-4. Navigate to the advanced folder by typing:
+4. Navigate to the `advanced` folder by typing:
 
 ```bash
-
 $ cd advanced
-
 ```
 
 Run the command below:
 
 ```bash
-
 $ sudo php init
-
 ```
 
-This command will initialize your project in advanced. Choose option 0.
+This command will initialize your project in `advanced`. Choose option 0.
 
-5. To rename this project to CRUD project, open `/opt/lampp/htdocs` and enter:
+5. To rename this project to CRUD project, open `/opt/lampp/htdocs` and press enter:
 
 ```bash
-
 $ sudo mv advanced CRUD
-
 ```
 
 You have created a YII project named CRUD. Congrats!
@@ -96,65 +93,42 @@ You have created a YII project named CRUD. Congrats!
 NB. Please make sure you start your servers before running your project. Start Servers by entering the following command:
 
 ```
-
 $ sudo /opt/lampp/lampp start
-
 ```
 
-You can also refer to `Step 1` [here](https://www.section.io/engineering-education/maria-data-base/) on how to start the server.
+You can also refer to Step 1 [here](https://www.section.io/engineering-education/maria-data-base/)  on how to start the server.
 
 To verify that you have created a project, open your browser and type `http://localhost/CRUD/frontend/web`. This is what you should see:
 
-![CRUD project velification](CRUD_project_velification.png)
+![crud project velification](/engineering-education/crud-operations-with-yii2-framework-using-gii/crud_project_velification.png)
+
 
 ### Step 2 -- Connecting CRUD project with the database
 
 Open the `CRUD` project with your favorite type editor and navigate to, `common > config > mainlocal.php`. Change the code to look like this:
 
 ```php
-
 <?php
-
 return [
-
   'components' => [
-
       'db' => [
-
           'class' => 'yii\db\Connection',
-
           'dsn' => 'mysql:host=localhost;dbname=CRUD',
-
           'username' => 'root',
-
           'password' => '',
-
           'charset' => 'utf8',
-
       ],
-
       'mailer' => [
-
           'class' => 'yii\swiftmailer\Mailer',
-
           'viewPath' => '@common/mail',
-
           // send all mails to a file by default. You have to set
-
           // 'useFileTransport' to false and configure a transport
-
           // for the mailer to send real emails.
-
           'useFileTransport' => true,
-
       ],
-
   ],
-
 ];
-
 ```
-
 In the above code snippets, we have changed the `dbname` name from ``yiiadvanced`` to CRUD. By doing this we have connected our Project with the database.
 
 ### Step 3 -- Creating a simple database recond Using terminal
@@ -163,9 +137,9 @@ Let us now create a table in our database using the terminal. Refer on  `Step - 
 
 ### Step 4 -- CRUD Operation Using GII
 
-Open your browser and type `http://localhost/CRUD/frontend/web/index.php?r=gii `. If there is no error you should see a welcome page like the one below:
+Open your browser and type `http://localhost/CRUD/frontend/web/index.php?r=gii `. If there is no error you should see a welcome page like the one below.
 
-![Gii_welcome_page](Gii_welcome_page.png)
+![gii_welcome_page](gii_welcome_page.png)
 
 Kudos! You're now ready to use the GII module.
 
@@ -183,7 +157,7 @@ Model Class Name - `Students`
 
 Name space - here we are changing the path from `apps\models` to `frontend\models`
 
-`Click Preview`. You will get a page like the one below:
+Click `Preview`. You will get a page like the one below:
 
 ![generate](generate.png)
 
@@ -231,7 +205,7 @@ You will have only one record as shown in the figure below. The record is delete
 
 Wow!… CRUD operations completed.👏
 
-To see the files generated by GII for the functionality of CRUD, open :
+To see the files generated by GII for the functionality of CRUD, open:
 
 - views-`htdocs>CRUD>frontend>views>student`
 
@@ -239,7 +213,7 @@ To see the files generated by GII for the functionality of CRUD, open :
 
 - controllers- `htdocs>CRUD>frontend>controllers>StudentController.php`
 
-You can customize the files to meet your need.
+You can customize the files to meet your needs.
 
 ### Understanding the URL
 
@@ -255,12 +229,13 @@ Let us look at the URL below.
 
 3) create -  this is the action.
 
-I hope it's clear now.
+I hope it's clear now. 😹
 
 ### Conclusion
 
-CRUD is a very important code generator for a web application developer. It saves developers time and also reduces the amount of code a developer has to code without it. 
+CRUD <!--crud is an operation--> is a very important code generator for a web application developer. It saves developers time and also reduces the amount of code a developer has to code without it. 
 
 Try it in your next web application project.
 
 Happy coding! 🙂
+
