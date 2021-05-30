@@ -6,19 +6,16 @@ In this article, we will learn how to carry out CRUD operations using [YII 2 fra
 
 ### What is CRUD?
 
-The acronym CRUD stands for Create, Read, Update, Delete. Each letter in the abbreviation can also be used to refer to any role in a relational database application. <!--not true-->
-
+ The acronym CRUD stands for Create, Read, Update and Delete. 
 The function of each of the above is as shown below:
 
 1. CREATE - Creates a new record by executing an INSERT process.
 
-2. READ - Reads one single record and shows it using the Primary key. <!--revise-->
+2. READ - Reads one single record.
 
 3. UPDATE - Updates a record.
 
 4. Delete - Deletes a record.
-
-<!-- In this section, try being generic. eg. "Updates a record". Save the details for now -->
 
 ### What Is GII?
 
@@ -139,7 +136,7 @@ Let us now create a table in our database using the terminal. Refer on  `Step - 
 
 Open your browser and type `http://localhost/CRUD/frontend/web/index.php?r=gii `. If there is no error you should see a welcome page like the one below.
 
-![gii_welcome_page](gii_welcome_page.png)
+![gii_welcome_page](/engineering-education/crud-operations-with-yii2-framework-using-gii/gii_welcome_page.png)
 
 Kudos! You're now ready to use the GII module.
 
@@ -147,7 +144,7 @@ Now, let us use GII and generate code for the `student` table that you created i
 
 1. Click `start` on the `Model Generator`. This will open a page like the one below:
 
-![model_generator](model_generator.png)
+![model_generator](/engineering-education/crud-operations-with-yii2-framework-using-gii/model_generator.png)
 
 We need to fill the blank spaces. Let's do it:
 
@@ -159,13 +156,13 @@ Name space - here we are changing the path from `apps\models` to `frontend\model
 
 Click `Preview`. You will get a page like the one below:
 
-![generate](generate.png)
+![generate](/engineering-education/crud-operations-with-yii2-framework-using-gii/generate.png)
 
 Now click on `Generate` and you will see congratulations note at the bottom of your page.
 
 2. Click on `CRUD GENERATOR` and fill the blank spaces as shown in the image below:
 
-![crud_generator.png](crud_generator.png)
+![crud_generator.png](/engineering-education/crud-operations-with-yii2-framework-using-gii/crud_generator.png)
 
 Now click `Generate`. If it's successful, at the bottom you will have `The code has been generated .` You will also see the list of files created
 
@@ -177,31 +174,31 @@ Our GII is now ready to store data in the database. Let's create a simple record
 
 Fill in the blank spaces as shown below and click save.
 
-![create](create.png)
+![create](/engineering-education/crud-operations-with-yii2-framework-using-gii/create.png)
 
 From the acronym CRUD, we have seen the function of the letter `C` which is CREATE. On clicking Save, we will be working on the function of the letter `R` which is READ. Here, you will open a page with all records that you have created. You should have only one record since we only have a single record. It should look like the image below.
 
-![read](read.png)
+![read](/engineering-education/crud-operations-with-yii2-framework-using-gii/read.png)
 
 Create another record since we will have to delete one as we move on to the letter `D`.
 
 In your database you should have this:
 
-![database_record](database_record.png)
+![database_record](/engineering-education/crud-operations-with-yii2-framework-using-gii/database_record.png)
 
 Let us move on to the letter `U` which represents Update. As we had said earlier, we update a record depending on the primary key. Let us update our first record with primary key 1. Click  button `UPDATE` and update as below:
 
-![update](update.png)
+![upate](/engineering-education/crud-operations-with-yii2-framework-using-gii/update.png)
 
 Save your update and navigate to the database to see the changes.
 
-Let us delete record two under Primary Key 2. Since your working on record 1 navigate to your URL and change the id from `...id=1` to `..id = 2`, Refresh your browser.
+Let us delete record two under Primary Key 2. Since your working on record 1 navigate to your URL and change the id from `...id=1` to `...id = 2`, Refresh your browser.
 
 Click the `Delete` button. Click OK on the confirmation pop-up that will appear on your screen.
 
 You will have only one record as shown in the figure below. The record is deleted in the database as well.
 
-![delete](delete.png)
+![delete](/engineering-education/crud-operations-with-yii2-framework-using-gii/delete.png)
 
 Wow!… CRUD operations completed.👏
 
@@ -233,7 +230,7 @@ I hope it's clear now. 😹
 
 ### Conclusion
 
-CRUD <!--crud is an operation--> is a very important code generator for a web application developer. It saves developers time and also reduces the amount of code a developer has to code without it. 
+CRUD is an operation that is very important for a web application developer. It saves developers time and also reduces the amount of code a developer has to code without it. 
 
 Try it in your next web application project.
 
