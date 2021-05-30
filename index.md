@@ -2,7 +2,7 @@
 
 Programmers who have ever worked with the database are likely to have also worked with CRUD Operations.  These operations are very important when a developer wants to learn any web framework. 
 
-In this article, we will learn how to carry out CRUD operations using [YII 2 framework](https://www.yiiframework.com/).
+In this article, we will learn how to carry out CRUD operations using the [YII 2 framework](https://www.yiiframework.com/).
 
 ### What is CRUD?
 
@@ -30,7 +30,7 @@ This tutorial assumes that you have:
 
 After installing Xampp, a folder `/opt/lampp` will be created in Linux OS. We will use this folder later to create our YII project.
 
-2. YII 2 installed. If not, refer [to this tutorial](https://www.section.io/engineering-education/php-yii2-framework/) on how to download.  Download it and intall in your machine.
+2. YII 2 installed. If not, refer [to this tutorial](https://www.section.io/engineering-education/php-yii2-framework/) on how to download.  Download it and install it on your machine.
 
 We will do the following in this article:
 
